@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Tutorial - Open Science and Data Platform</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+      font-size: 1.8em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .modal-body {
+      font-size: 1em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .modal-footer {
+      margin-top: 20px;
+    }
+
+    .step {
+      display: none;
+    }
+
+    .step-active {
+      display: block;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s;
+      margin: 0 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .btn-close {
+      background-color: #6c757d;
+    }
+
+    .btn-close:hover {
+      background-color: #5a6268;
+    }
+
+    /* Accessibility: Ensuring that focus is visible for keyboard navigation */
+    button:focus {
+      outline: 2px dashed #0056b3;
+      outline-offset: 4px;
+    }
+
+    /* Adding media queries for responsiveness */
+    @media (min-width: 768px) {
+      .modal-content {
+        padding: 40px;
+        max-width: 600px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tutorialModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        Your Guide to Exploring the Open Science and Data Platform
+      </div>
+      <div id="step1" class="modal-body step step-active">
+        <h2>Welcome to the Tutorial:</h2>
+        <p>Select a topic to jump directly to that section:</p>
+        <ul>
+          <li><a href="#" onclick="gotoStep(2)">Keyword Search</a></li>
+          <li><a href="#" onclick="gotoStep(3)">Advanced Search</a></li>
+          <li><a href="#" onclick="gotoStep(4)">Explore By Area</a></li>
+        </ul>
+      </div>
+      <div id="step2" class="modal-body step">
+        <h2>Keyword Search:</h2>
+        <p>By using the Keyword Search you can access publications, datasets, development activities, and content
+          collections available through the platform.</p>
+        <p><em>Tip:</em> Use specific keywords or locations for better results.</p>
+        <p><a href="#" onclick="gotoStep(1)">Back to Introduction</a></p>
+      </div>
+      <div id="step3" class="modal-body step">
+        <h2>Advanced Search:</h2>
+        <p>Refine your search with filters and criteria to find exactly what you need.</p>
+        <p><a href="#" onclick="gotoStep(1)">Back to Introduction</a></p>
+      </div>
+      <div id="step4" class="modal-body step">
+        <h2>Explore By Area:</h2>
+        <p>Use the "explore by area" feature to discover geographic-specific data on our interactive map.</p>
+        <p><a href="#" onclick="gotoStep(1)">Back to Introduction</a></p>
+      </div>
+      <!-- More steps can be added here -->
+      <div class="modal-footer">
+        <button onclick="prevStep()">Previous</button>
+        <button onclick="nextStep()">Next</button>
+        <button class="btn-close" onclick="closeTutorial()">Close Tutorial</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 1;
+    const maxStep = 4; // Adjust the maxStep based on the actual number of steps
+
+    function showStep(step) {
+      for (let i = 1; i <= maxStep; i++) {
+        var stepDiv = document.getElementById('step' + i);
+        if (stepDiv) {
+          stepDiv.classList.remove('step-active');
+        }
+      }
+      var activeStepDiv = document.getElementById('step' + step);
+      if (activeStepDiv) {
+        activeStepDiv.classList.add('step-active');
+      }
+    }
+
+    function nextStep() {
+      if (currentStep < maxStep) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    }
+
+    function prevStep() {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    }
+
+    function gotoStep(step) {
+      currentStep = step;
+      showStep(currentStep);
+    }
+
+    function closeTutorial() {
+      document.getElementById('tutorialModal').style.display = 'none';
+        // Redirect to 'main.html'
+  window.location.href = 'main.html';
+    }
+
+    // Automatically open the tutorial when the page loads
+    window.onload = function () {
+      document.getElementById('tutorialModal').style.display = 'flex';
+      
+    };
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Your Guide to Exploring the Open Science and Data Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .site-header {
+      background: #f8f8f8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .site-header .logo,
+    .site-header .dropdown,
+    .site-header .search-container {
+      margin-right: 20px;
+    }
+
+    .site-header img.logo {
+      cursor: pointer;
+      height: 50px;
+    }
+
+    .menu-item {
+      text-decoration: none;
+      color: #0053b3;
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    .menu-item:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      padding: 12px 16px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-container {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    .platform-intro,
+    .search-area,
+    .tips,
+    .featured-content,
+    footer {
+      padding: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .platform-intro h1 {
+      color: #0053b3;
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .search-area input[type="text"] {
+      width: calc(100% - 42px);
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .search-area button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 0 4px 4px 0;
+      font-size: 1em;
+    }
+
+    .search-area button:hover {
+      background-color: #0056b3;
+    }
+
+    .tips h2,
+    .featured-content h2 {
+      font-size: 1.5em;
+      color: #0053b3;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 10px;
+      border: none;
+    }
+
+    .header-image {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .tips-button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      margin: 10px 0;
+    }
+
+    .tips-button:hover {
+      background-color: #003974;
+    }
+
+    .tips-link {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      background: #ffffff;
+      color: #000000;
+      padding: 8px;
+      z-index: 100;
+    }
+
+    .skip-link:focus,
+    .skip-link:active {
+      left: 0;
+      top: 0;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#maincontent" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <!-- Header content -->
+    <!-- (Assuming the header content is already complete) -->
+  </header>
+
+  <main>
+    <!-- Introduction Section -->
+    <section class="platform-intro" id="maincontent">
+      <h1>Your Guide to Exploring the Open Science and Data Platform</h1>
+      <!-- Additional introduction content -->
+    </section>
+
+    <!-- Tips Section -->
+    <section class="tips">
+      <h2>Tips for Searching</h2>
+      <button id="keywordBtn" class="tips-button">Keyword Search Tips</button>
+      <!-- Keyword Search Modal -->
+      <div id="keywordModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Keyword Search Tips</h2>
+          <!-- Placeholder content for keyword search tips -->
+        </div>
+      </div>
+
+      <button id="advancedBtn" class="tips-button">Advanced Search Tips</button>
+      <!-- Advanced Search Modal -->
+      <div id="advancedModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Advanced Search Tips</h2>
+          <!-- Placeholder content for advanced search tips -->
+        </div>
+      </div>
+      <!-- Explore By Area Section -->
+      <section class="explore-area">
+        <h2>Explore By Area</h2>
+        <button id="exploreBtn" class="tips-button">Explore By Area Tips</button>
+        <!-- Explore By Area Modal -->
+        <div id="exploreModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Explore By Area Tips</h2>
+            <!-- Placeholder content for Explore By Area tips -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Detailed Map Viewer Instructions Section -->
+      <section class="map-instructions">
+        <h2>Detailed Instructions for Use of the Map Viewer</h2>
+        <button id="mapBtn" class="tips-button">Map Viewer Instructions</button>
+        <!-- Map Viewer Instructions Modal -->
+        <div id="mapModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Map Viewer Instructions</h2>
+            <!-- Placeholder content for map viewer instructions -->
+          </div>
+        </div>
+      </section>
+
+      <!-- How to Download Datasets Section -->
+      <section class="download-datasets">
+        <h2>How to Download Datasets</h2>
+        <button id="downloadBtn" class="tips-button">Download Datasets Tips</button>
+        <!-- Download Datasets Modal -->
+        <div id="downloadModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Download Datasets Tips</h2>
+            <!-- Placeholder content for download datasets tips -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Additional buttons and modals for each tip -->
+
+    </section>
+
+    <!-- Other sections -->
+  </main>
+
+  <footer>
+    <!-- Footer content -->
+    <!-- (Assuming the footer content is already complete) -->
+  </footer>
+
+
+  <!-- JavaScript for Modal Popups -->
+  <script>
+    // Get all modals
+    var keywordModal = document.getElementById("keywordModal");
+    var advancedModal = document.getElementById("advancedModal");
+    var exploreModal = document.getElementById("exploreModal");
+    var mapModal = document.getElementById("mapModal");
+    var downloadModal = document.getElementById("downloadModal")
+    // ... More modals if needed
+
+    // Get all buttons that open modals
+    var keywordBtn = document.getElementById("keywordBtn");
+    var advancedBtn = document.getElementById("advancedBtn");
+    var exploreBtn = document.getElementById("exploreBtn");
+    var mapBtn = document.getElementById("mapBtn");
+    var downloadBtn = document.getElementById("downloadBtn");
+    // ... More buttons if needed
+
+    // Get all <span> elements that close modals
+    var spans = document.getElementsByClassName("close");
+
+    // Open modal function
+    function openModal(modal) {
+      modal.style.display = "block";
+    }
+
+    // Close modal function
+    function closeModal(modal) {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks the button, open the respective modal
+    keywordBtn.onclick = function () { openModal(keywordModal); }
+    advancedBtn.onclick = function () { openModal(advancedModal); }
+    exploreBtn.onclick = function () { openModal(exploreModal); }
+    mapBtn.onclick = function () { openModal(mapModal); }
+    downloadBtn.onclick = function () { openModal(downloadModal); }
+    // ... More event listeners for other buttons
+
+    // When the user clicks on <span> (x), close the respective modal
+    for (var i = 0; i < spans.length; i++) {
+      spans[i].onclick = function () {
+        closeModal(this.parentElement.parentElement);
+      }
+    }
+
+    // When the user clicks anywhere outside of any modal, close it
+    window.onclick = function (event) {
+      if (event.target.className === "modal") {
+        closeModal(event.target);
+      }
+    }
+  </script>
+</body>
+
+</html>

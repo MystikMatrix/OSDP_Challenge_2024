@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Open Science and Data Platform</title>
+  <style>
+    /* Styles go here */
+    
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .site-header {
+      background-color: #EFEFEF; /* Updated to the lighter gray based on the image */
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .site-header .logo {
+      height: 80px; /* Updated to match the image */
+      width: auto;
+    }
+
+    .site-header .menu-item,
+    .site-header .dropdown,
+    .site-header .search-container {
+      font-size: 0.9em; /* Reduced font size for a cleaner look */
+      margin-right: 20px;
+    }
+
+    .site-header .menu-item:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 160px; /* Width of the dropdown content */
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-container {
+      margin-left: auto;
+    }
+
+    .search-icon {
+      width: 30px; /* Adjusted to match image size */
+      height: auto;
+    }
+
+    .menu-item {
+      text-decoration: none;
+      color: #26374A; /* Dark blue color matching the image */
+      font-size: 14px;
+      padding: 5px 10px;
+    }
+
+    .menu-item:hover {
+      text-decoration: underline;
+    }
+
+    .search-container {
+      cursor: pointer;
+    }
+
+    .search-icon {
+      height: 24px;
+      width: auto;
+    }
+
+    .main-content {
+      background-color: #FFF; /* White background for main content */
+      color: #26374A; /* Dark blue text to match the header links */
+      padding: 20px;
+    }
+
+    .main-content h1 {
+      color: #26374A;
+      font-size: 24px;
+    }
+
+    .main-content p {
+      font-size: 16px;
+    }
+
+    .sticky {
+      position: -webkit-sticky; /* Fallback for Safari */
+      position: sticky;
+      top: 0;
+      background-color: #FFD100; /* Yellow background as in the header image */
+      color: #26374A;
+      padding: 15px 20px;
+      font-size: 20px;
+    }
+
+    .accordion {
+      background-color: #EFEFEF;
+      color: #26374A;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+      background-color: #d3d3d3; /* Lighter gray for active/hover state */
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+      border-left: 4px solid #1a0dcf; /* blue border as accent */
+    }
+
+    footer {
+      background: #EFEFEF;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <!-- Wrap the image with an anchor tag pointing to www.canada.ca -->
+      <a href="https://www.canada.ca">
+        <img src="images/header.jpg" alt="Government of Canada logo" class="logo-image">
+      </a>
+
+    </div>
+    <a href="https://www.canada.ca" class="menu-item">Canada.ca</a>
+    <div class="dropdown">
+      <span class="menu-item dropdown-toggle">Services & Resources</span>
+      <div class="dropdown-content">
+        <a href="#">Jobs and the workplace</a>
+        <a href="#">Immigration and citizenship</a>
+        <!-- Additional dropdown links -->
+      </div>
+    </div>
+    <!-- Language Translation Dropdown -->
+    <div class="language-dropdown">
+      <button class="language-toggle">Language</button>
+      <div class="language-content">
+        <a href="?lang=en">English</a>
+        <a href="?lang=fr">Français</a>
+        <a href="?lang=sp">Spanish</a>
+        <!-- Add more languages as needed -->
+      </div>
+      <div class="search-container" onclick="window.location='/search'">
+        <img src="images/searchbar.jpg" alt="Search icon" class="search-icon">
+      </div>
+  </header>
+
+  <div class="main-content">
+    <h1>Check out all sections for more information on our Platform!!! </h1>
+    <button class="accordion">About the Platform</button>
+    <div class="panel">
+      <p>Platform Overview... [Pseudo text for content]</p>
+    </div>
+
+    <button class="accordion">Our Goal</button>
+    <div class="panel">
+      <p>Details about the goals of the platform... [Pseudo text for content]</p>
+    </div>
+
+    <button class="accordion">Data Contributors</button>
+    <div class="panel">
+      <p>List of data contributors and their roles... [Pseudo text for content]</p>
+    </div>
+
+  <button class="accordion">Cumulative Effects Records</button>
+  <div class="panel">
+    <p>These records include geospatial data, project impact assessment records, federal regulatory activities, maps, and scientific publications2.</p>
+  </div>
+</div>
+
+  <footer>
+    © 2024 Government of Canada
+  </footer>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
