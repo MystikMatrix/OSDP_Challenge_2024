@@ -2,139 +2,10 @@
 <html lang="en">
 <head>
   <title>Open Science and Data Platform</title>
-  <style>
-    /* Styles go here */
+  <link rel="stylesheet" href="style.css">
     
 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
-
-    .site-header {
-      background-color: #EFEFEF; /* Updated to the lighter gray based on the image */
-      padding: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    .site-header .logo {
-      height: 80px; /* Updated to match the image */
-      width: auto;
-    }
-
-    .site-header .menu-item,
-    .site-header .dropdown,
-    .site-header .search-container {
-      font-size: 0.9em; /* Reduced font size for a cleaner look */
-      margin-right: 20px;
-    }
-
-    .site-header .menu-item:hover {
-      text-decoration: underline;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      min-width: 160px; /* Width of the dropdown content */
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .search-container {
-      margin-left: auto;
-    }
-
-    .search-icon {
-      width: 30px; /* Adjusted to match image size */
-      height: auto;
-    }
-
-    .menu-item {
-      text-decoration: none;
-      color: #26374A; /* Dark blue color matching the image */
-      font-size: 14px;
-      padding: 5px 10px;
-    }
-
-    .menu-item:hover {
-      text-decoration: underline;
-    }
-
-    .search-container {
-      cursor: pointer;
-    }
-
-    .search-icon {
-      height: 24px;
-      width: auto;
-    }
-
-    .main-content {
-      background-color: #FFF; /* White background for main content */
-      color: #26374A; /* Dark blue text to match the header links */
-      padding: 20px;
-    }
-
-    .main-content h1 {
-      color: #26374A;
-      font-size: 24px;
-    }
-
-    .main-content p {
-      font-size: 16px;
-    }
-
-    .sticky {
-      position: -webkit-sticky; /* Fallback for Safari */
-      position: sticky;
-      top: 0;
-      background-color: #FFD100; /* Yellow background as in the header image */
-      color: #26374A;
-      padding: 15px 20px;
-      font-size: 20px;
-    }
-
-    .accordion {
-      background-color: #EFEFEF;
-      color: #26374A;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 16px;
-      transition: 0.4s;
-    }
-
-    .active, .accordion:hover {
-      background-color: #d3d3d3; /* Lighter gray for active/hover state */
-    }
-
-    .panel {
-      padding: 0 18px;
-      background-color: white;
-      display: none;
-      overflow: hidden;
-      border-left: 4px solid #1a0dcf; /* blue border as accent */
-    }
-
-    footer {
-      background: #EFEFEF;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-    }
-  </style>
+   
 </head>
 <body>
   <header class="site-header">
@@ -169,7 +40,12 @@
   </header>
 
   <div class="main-content">
-    <h1>Check out all sections for more information on our Platform!!! </h1>
+    <h1><a href="main.html">
+      <img src="logo.webp"
+           alt="OSDP home logo."
+           class="header-image"
+           style="width: 50px; height: auto;">
+  </a>Check out all sections for more information on our Platform!!! </h1>
     <button class="accordion">About the Platform</button>
     <div class="panel">
       <p>Platform Overview... [Pseudo text for content]</p>

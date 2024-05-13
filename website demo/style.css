@@ -432,4 +432,618 @@ body {
   .button-ml:hover {
     background-color: #0056b3;
   }
-  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light grey background */
+color: #333; /* Darker text for better contrast */
+  }
+
+  .site-header {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .site-header .logo,
+  .site-header .dropdown,
+  .site-header .search-container {
+    margin-right: 20px;
+  }
+
+  .site-header img.logo {
+    cursor: pointer;
+    height: 50px;
+  }
+
+  .menu-item {
+    text-decoration: none;
+    color: #0053b3;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .menu-item:hover, .button:hover {
+background-color: #0056b3; /* Bright accent color for hover states */
+color: white; /* White text for readability */
+}
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 12px 16px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .search-container {
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  .platform-intro,
+  .search-area,
+  .tips,
+  .featured-content,
+  footer {
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .platform-intro h1 {
+    color: #0053b3;
+    margin: 0;
+    font-size: 2.5em;
+  }
+
+  .search-area input[type="text"] {
+    width: calc(100% - 42px);
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .search-area button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 1em;
+  }
+
+  .search-area button:hover {
+    background-color: #0056b3;
+  }
+
+  .tips h2,
+  .featured-content h2 {
+    font-size: 1.5em;
+    color: #0053b3;
+    margin-top: 20px;
+  }
+
+  footer {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 10px;
+    border: none;
+  }
+
+  .header-image {
+    width: 100%;
+    /* Ensures the image scales with the width of the container */
+    height: auto;
+    /* Maintains the image's aspect ratio */
+    max-height: 300px;
+    /* Maximum height to ensure the image isn't too tall on larger screens */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+  }
+
+  .tips-button {
+    background-color: #007bff;
+    /* Color of the button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    /* Allows it to sit in line with text */
+    margin: 10px 0;
+  }
+
+  .tips-button:hover {
+    background-color: #003974;
+    /* Darker shade for hover effect */
+  }
+
+  .tips-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+  }
+
+  .video-tour {
+    background-color:#0053b3;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .video-tour:hover {
+    background-color: #e1e1e1;
+    text-decoration: underline;
+  }
+
+  .latest-updates {
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .latest-updates h2 {
+    color: #0053b3;
+    margin-bottom: 15px;
+  }
+
+  .latest-updates article {
+    margin-bottom: 15px;
+  }
+
+  .latest-updates h3 {
+    font-size: 1.2em;
+  }
+
+  .latest-updates p {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .latest-updates a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .latest-updates a:hover {
+    text-decoration: underline;
+  }
+
+  /* Accessibility Improvements */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
+  }
+
+  /* Search and Explore Styles */
+  .search-and-explore {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .search-keywords,
+  .explore-map {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .search-keywords input,
+  .explore-map input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .search-keywords button,
+  .explore-map button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+
+  .search-keywords button:hover,
+  .explore-map button:hover {
+    background-color: #0056b3;
+  }
+
+  .explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+  }
+
+  .explore-button:hover,
+  .explore-button:focus {
+    background-color: #0056b3;
+  }
+
+  input[type="text"][disabled],
+  button[disabled] {
+    background-color: #f0f0f0;
+    color: #ccc;
+  }
+
+  button[disabled] {
+    cursor: not-allowed;
+  }
+
+  /* Chatbot Styles */
+  #chatbot {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    max-width: 80%;
+    display: block;
+    z-index: 1000;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  #toggleChatbot {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  #messages {
+    height: 150px;
+    /* Adjusted for space */
+    overflow-y: auto;
+    margin: 10px 0;
+  }
+
+  /* Make sure the input box and button do not overlap with messages */
+  #userInput,
+  button[onclick="sendMessage()"] {
+    width: calc(100% - 20px);
+    /* Adjusted width */
+    margin: 0 10px;
+    /* Add margin to center it within the chatbot */
+  }
+
+  /* Additional responsive adjustments for smaller screens */
+  @media (max-width: 600px) {
+    #chatbot {
+      bottom: 10px;
+      right: 10px;
+      width: calc(100% - 20px);
+    }
+
+    #toggleChatbot {
+      position: absolute;
+      /* Absolute positioning within the chatbot */
+      top: 10px;
+      /* Position at the top */
+      right: 10px;
+      /* Position from the right side */
+    }
+  }
+
+  .user {
+    text-align: right;
+    color: blue;
+  }
+
+  .bot {
+    text-align: left;
+    color: green;
+  }
+
+  #alexDataAvatar {
+    display: block;
+    margin: 0 auto 10px;
+    /* Center the avatar above the messages */
+    max-width: 100px;
+    /* Adjust the size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 50%;
+    /* Optional: creates a rounded avatar */
+  }
+
+  /* New styles for added elements */
+  .survey-button,
+  .contact-button {
+    background-color: #0053b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    font-size: 16px;
+  }
+
+  .survey-button:hover,
+  .contact-button:hover {
+    background-color: #003974;
+  }
+
+  .survey-link,
+  .contact-link {
+    text-decoration: none;
+    color: white;
+  }
+
+  .language-dropdown .language-toggle {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f5f2f2;
+    border: none;
+    font-size: 16px;
+    color: blue;
+  }
+
+  .language-dropdown .language-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    right: 0;
+    font-size: 25px;
+  }
+
+  .language-dropdown:hover .language-content {
+    display: block;
+  }
+
+  /* Ensure dropdowns don't overlap */
+  .site-header .dropdown,
+  .language-dropdown {
+    margin-right: 20px;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .button-ml {
+    background-color: #0053b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    font-size: 16px;
+    /* Smooth transition for hover effect */
+  }
+
+  .button-ml:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+  }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .site-header {
+    background-color: #EFEFEF; /* Updated to the lighter gray based on the image */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .site-header .logo {
+    height: 80px; /* Updated to match the image */
+    width: auto;
+  }
+
+  .site-header .menu-item,
+  .site-header .dropdown,
+  .site-header .search-container {
+    font-size: 0.9em; /* Reduced font size for a cleaner look */
+    margin-right: 20px;
+  }
+
+  .site-header .menu-item:hover {
+    text-decoration: underline;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px; /* Width of the dropdown content */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .search-container {
+    margin-left: auto;
+  }
+
+  .search-icon {
+    width: 30px; /* Adjusted to match image size */
+    height: auto;
+  }
+
+  .menu-item {
+    text-decoration: none;
+    color: #26374A; /* Dark blue color matching the image */
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .menu-item:hover {
+    text-decoration: underline;
+  }
+
+  .search-container {
+    cursor: pointer;
+  }
+
+  .search-icon {
+    height: 24px;
+    width: auto;
+  }
+
+  .main-content {
+    background-color: #FFF; /* White background for main content */
+    color: #26374A; /* Dark blue text to match the header links */
+    padding: 20px;
+  }
+
+  .main-content h1 {
+    color: #26374A;
+    font-size: 24px;
+  }
+
+  .main-content p {
+    font-size: 16px;
+  }
+
+  .sticky {
+    position: -webkit-sticky; /* Fallback for Safari */
+    position: sticky;
+    top: 0;
+    background-color: #FFD100; /* Yellow background as in the header image */
+    color: #26374A;
+    padding: 15px 20px;
+    font-size: 20px;
+  }
+
+  .accordion {
+    background-color: #EFEFEF;
+    color: #26374A;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s;
+  }
+
+  .active, .accordion:hover {
+    background-color: #d3d3d3; /* Lighter gray for active/hover state */
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border-left: 4px solid #1a0dcf; /* blue border as accent */
+  }
+
+  footer {
+    background: #EFEFEF;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }

@@ -3,493 +3,8 @@
 
 <head>
   <title>Open Science and Data Platform</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-    }
-
-    .site-header {
-      background: #f8f8f8;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .site-header .logo,
-    .site-header .dropdown,
-    .site-header .search-container {
-      margin-right: 20px;
-    }
-
-    .site-header img.logo {
-      cursor: pointer;
-      height: 50px;
-    }
-
-    .menu-item {
-      text-decoration: none;
-      color: #0053b3;
-      font-size: 16px;
-      margin-right: 20px;
-    }
-
-    .menu-item:hover {
-      text-decoration: underline;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropdown-toggle {
-      cursor: pointer;
-      font-size: 1.2em;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      padding: 12px 16px;
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      text-decoration: none;
-      display: block;
-      padding: 12px 16px;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    .search-container {
-      margin-left: auto;
-      cursor: pointer;
-    }
-
-    .platform-intro,
-    .search-area,
-    .tips,
-    .featured-content,
-    footer {
-      padding: 20px;
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    .platform-intro h1 {
-      color: #0053b3;
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    .search-area input[type="text"] {
-      width: calc(100% - 42px);
-      padding: 10px;
-      margin: 10px 0;
-      font-size: 1em;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-
-    .search-area button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 0 4px 4px 0;
-      font-size: 1em;
-    }
-
-    .search-area button:hover {
-      background-color: #0056b3;
-    }
-
-    .tips h2,
-    .featured-content h2 {
-      font-size: 1.5em;
-      color: #0053b3;
-      margin-top: 20px;
-    }
-
-    footer {
-      background: #f8f8f8;
-      text-align: center;
-      padding: 10px;
-      border: none;
-    }
-
-    .header-image {
-      width: 100%;
-      /* Ensures the image scales with the width of the container */
-      height: auto;
-      /* Maintains the image's aspect ratio */
-      max-height: 300px;
-      /* Maximum height to ensure the image isn't too tall on larger screens */
-      object-fit: cover;
-      /* Ensures the image covers the area without stretching */
-    }
-
-    .tips-button {
-      background-color: #007bff;
-      /* Color of the button */
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      display: inline-block;
-      /* Allows it to sit in line with text */
-      margin: 10px 0;
-    }
-
-    .tips-button:hover {
-      background-color: #003974;
-      /* Darker shade for hover effect */
-    }
-
-    .tips-link {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-    }
-
-    .video-tour {
-      background-color: #f2f2f2;
-      color: #0053b3;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease;
-    }
-
-    .video-tour:hover {
-      background-color: #e1e1e1;
-      text-decoration: underline;
-    }
-
-    .latest-updates {
-      padding: 20px;
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    .latest-updates h2 {
-      color: #0053b3;
-      margin-bottom: 15px;
-    }
-
-    .latest-updates article {
-      margin-bottom: 15px;
-    }
-
-    .latest-updates h3 {
-      font-size: 1.2em;
-    }
-
-    .latest-updates p {
-      font-size: 1em;
-      margin-bottom: 5px;
-    }
-
-    .latest-updates a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    .latest-updates a:hover {
-      text-decoration: underline;
-    }
-
-    /* Accessibility Improvements */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #000;
-      color: white;
-      padding: 8px;
-      z-index: 100;
-    }
-
-    .skip-link:focus {
-      top: 0;
-    }
-
-    /* Search and Explore Styles */
-    .search-and-explore {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      padding: 20px;
-      border-bottom: 1px solid #eaeaea;
-    }
-
-    .search-keywords,
-    .explore-map {
-      background: #f8f8f8;
-      padding: 20px;
-      border-radius: 5px;
-    }
-
-    .search-keywords input,
-    .explore-map input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-    }
-
-    .search-keywords button,
-    .explore-map button {
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 1em;
-    }
-
-    .search-keywords button:hover,
-    .explore-map button:hover {
-      background-color: #0056b3;
-    }
-
-    .explore-button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      text-align: center;
-      text-decoration: none;
-      cursor: pointer;
-      margin-top: 10px;
-      font-size: 1em;
-    }
-
-    .explore-button:hover,
-    .explore-button:focus {
-      background-color: #0056b3;
-    }
-
-    input[type="text"][disabled],
-    button[disabled] {
-      background-color: #f0f0f0;
-      color: #ccc;
-    }
-
-    button[disabled] {
-      cursor: not-allowed;
-    }
-
-    /* Chatbot Styles */
-    #chatbot {
-      position: fixed;
-      bottom: 0;
-      right: 20px;
-      width: 300px;
-      max-width: 80%;
-      display: block;
-      z-index: 1000;
-      background: white;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-
-    #toggleChatbot {
-      display: block;
-      margin: 0 auto;
-      padding: 5px 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    #messages {
-      height: 150px;
-      /* Adjusted for space */
-      overflow-y: auto;
-      margin: 10px 0;
-    }
-
-    /* Make sure the input box and button do not overlap with messages */
-    #userInput,
-    button[onclick="sendMessage()"] {
-      width: calc(100% - 20px);
-      /* Adjusted width */
-      margin: 0 10px;
-      /* Add margin to center it within the chatbot */
-    }
-
-    /* Additional responsive adjustments for smaller screens */
-    @media (max-width: 600px) {
-      #chatbot {
-        bottom: 10px;
-        right: 10px;
-        width: calc(100% - 20px);
-      }
-
-      #toggleChatbot {
-        position: absolute;
-        /* Absolute positioning within the chatbot */
-        top: 10px;
-        /* Position at the top */
-        right: 10px;
-        /* Position from the right side */
-      }
-    }
-
-    .user {
-      text-align: right;
-      color: blue;
-    }
-
-    .bot {
-      text-align: left;
-      color: green;
-    }
-
-    #alexDataAvatar {
-      display: block;
-      margin: 0 auto 10px;
-      /* Center the avatar above the messages */
-      max-width: 100px;
-      /* Adjust the size as needed */
-      height: auto;
-      /* Maintain aspect ratio */
-      border-radius: 50%;
-      /* Optional: creates a rounded avatar */
-    }
-
-    /* New styles for added elements */
-    .survey-button,
-    .contact-button {
-      background-color: #0053b3;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      display: inline-block;
-      margin: 10px;
-      font-size: 16px;
-    }
-
-    .survey-button:hover,
-    .contact-button:hover {
-      background-color: #003974;
-    }
-
-    .survey-link,
-    .contact-link {
-      text-decoration: none;
-      color: white;
-    }
-
-    .language-dropdown .language-toggle {
-      cursor: pointer;
-      padding: 5px 10px;
-      background-color: #f5f2f2;
-      border: none;
-      font-size: 16px;
-      color: blue;
-    }
-
-    .language-dropdown .language-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      padding: 12px 16px;
-      right: 0;
-      font-size: 25px;
-    }
-
-    .language-dropdown:hover .language-content {
-      display: block;
-    }
-
-    /* Ensure dropdowns don't overlap */
-    .site-header .dropdown,
-    .language-dropdown {
-      margin-right: 20px;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgb(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .button-ml {
-      background-color: #0053b3;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: center;
-      display: inline-block;
-      margin: 10px;
-      font-size: 16px;
-      /* Smooth transition for hover effect */
-    }
-
-    .button-ml:hover {
-      background-color: #0056b3;
-      /* Darker shade on hover */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -528,7 +43,12 @@
 
   <main>
     <section class="platform-intro">
-      <h1>Open Science and Data Platform</h1>
+    <div>
+      <h1><img src="logo.webp"
+        alt="OSDP home logo."
+        class="header-image"
+        style="width: 50px; height: auto;">Open Science and Data Platform   </h1>
+    </div>
       <img src="images/headerpic2.jpg"
         alt="Canadian Rocky Mountains and urban skyline with overlaid scientific icons representing Canada's diverse scientific research and innovation."
         class="header-image">
@@ -536,15 +56,16 @@
       <div class="important-info">
         <p>The Open Science and Data Platform provides access to thousands of records of cumulative effects related
           data, publications, maps, and information about development activities. New information is added as we engage
-          with additional content providers.</p>
-        <p><button class="survey-button" ><a href="about.html" class="survey-link">Find out more about the OSDP and Cumaltive Effects</a></p></button>
+          with additional content providers.</p></div>
+          
+       <button class="survey-button" ><a href="about.html" class="survey-link">Find out more about the OSDP and Cumaltive Effects</a></button>
         <!-- Video tour link with an enticing title -->
-        <p class="video-tour-link">
+        <class="video-tour-link">
           <a href="https://www.youtube.com/watch?v=zAM_HpKm2Ks" target="_blank" class="video-tour">🎥 Discover the
             Possibilities: Take a Video
             Tour!</a>
-        </p>
-      </div>
+        
+     
       <!-- Wrap the link in a button element -->
 
       <button class="survey-button"><a href="guided_mock.html" class="survey-link">Tutorial on searching and navigating the Platform</a></button>
@@ -552,25 +73,13 @@
       <button class="survey-button">
         <a href="survey.html" class="survey-link">Take Our Survey</a>
       </button>
-      !-- <button onclick="window.location.href='recommendations.html';">View Recommendations</button>
-    <!-- Button to Open Modal -->
-    
+   <button onclick="window.location.href='recommendations.html';">View Recommendations</button>
 
-    <!-- Modal Structure -->
-    <div id="ml-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Benefits of Machine Learning at OSDP</h2>
-        <p>Machine learning improves data accuracy, speeds up data processing, and personalizes your search experience
-          by learning from your interactions.</p>
-        <ul>
-          <li><strong>Predictive Analysis:</strong> Predict future trends from past data.</li>
-          <li><strong>Efficiency:</strong> Automate routine data processing tasks.</li>
-          <li><strong>Personalization:</strong> Tailor suggestions and content to your interests.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  <button onclick="window.location.href='googlemaps.html';">Interactive Mapbased Search --mash up of google maps and open data</button></div>
+    <!-- Button to Open Modal -->
+
+
+   </section>
     <section class="search-and-explore">
 
       <!-- Keyword Search Form -->
@@ -588,14 +97,14 @@
         <h2>Start your search:</h2>
         <input type="text" placeholder="Search by keywords e.g., 'air quality'" aria-label="Search by keywords"
           disabled>
-        <button disabled>Search</button>
+        <button >Search</button>
         <p class="input-description">Use this search box for broad queries across our entire database. (Demo only)</p>
       </div>
 
       <div class="explore-map">
         <h2>Explore by area:</h2>
         <input type="text" placeholder="Enter a location e.g., 'Cold Lake'" aria-label="Explore by area" disabled>
-        <button disabled>Search This Area</button>
+        <button >Search This Area</button>
         <p class="input-description">Enter a location to view specific regional data on our interactive map. (Demo only)
         </p>
       </div>
@@ -605,7 +114,7 @@
         <ul>
           <li>
             <article>
-              <h3>Update Title Here</h3>
+              <h3>OSDP Latest and Greatest</h3>
               <p>Summary of the update...</p>
               <a href="updates.html">Read more</a>
             </article>
@@ -614,9 +123,9 @@
         </ul>
       </section>
       <section class="featured-content">
-        <h2>Learn About Our Data</h2>
+        <h2>Picture Gallery</h2>
         <p>Explore interactive maps, latest datasets, and learn how our data is collected and used.</p>
-        <button>Start Exploring</button>
+        <button class="survey-button">Explore Our Community Gallery!</button>
       </section>
   </main>
   <!-- Chat with AlexData Button (Initially Visible) -->
@@ -624,15 +133,24 @@
 
   <!-- Chatbot (Initially Hidden) -->
   <div id="chatbot"
-    style="display: none; position: fixed; bottom: 0; right: 20px; width: 300px; max-width: 80%; z-index: 1000; background: white; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px;">
-    <!-- Close Chat Button Inside Chatbot -->
-    <button id="closeChatbot">Close Chat</button>
-    <img src="images/alexdata3.png" alt="AlexData Character" id="alexDataAvatar">
-    <div id="messages"></div>
-    <input type="text" id="userInput" placeholder="Ask me something...">
-    <button onclick="sendMessage()">Send</button>
-  </div>
- 
+  style="display: none; position: fixed; bottom: 0; right: 20px; width: 300px; max-width: 80%; z-index: 1000; background: white; padding: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border-radius: 10px;">
+ <!-- Close Chat Button Inside Chatbot -->
+ <button id="closeChatbot">Close Chat</button>
+ <!-- Bot Information -->
+ <div id="botInfo" style="padding: 10px; border-bottom: 1px solid #ccc; margin-bottom: 10px;">
+   
+ </div><img src="logo.webp"
+ alt="OSDP home logo."
+ class="header-image"
+ style="width: 50px; height: auto;">
+ <img src="images/alexdata3.png" alt="AlexData Character" id="alexDataAvatar">
+ <div id="messages">   <strong>Why Chat With Me?</strong><br>
+  I'm here 24/7 to help you navigate data, answer your queries, and guide you to the right resources.
+   Whether you need assistance with complex data searches or simple questions, I can provide quick 
+   and accurate responses, ensuring you make the most of the Open Science and Data Platform.</div>
+ <input type="text" id="userInput" placeholder="Ask me something...">
+ <button onclick="sendMessage()">Send</button>
+</div>
   <!-- Contact Us Button -->
   <button class="contact-button">
     <a href="contact.html" class="contact-link">Contact Us</a>
