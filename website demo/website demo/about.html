@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Open Science and Data Platform</title>
+  <link rel="stylesheet" href="style.css">
+    
+
+   
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <!-- Wrap the image with an anchor tag pointing to www.canada.ca -->
+      <a href="https://www.canada.ca">
+        <img src="images/header.jpg" alt="Government of Canada logo" class="logo-image">
+      </a>
+
+    </div>
+    <a href="https://www.canada.ca" class="menu-item">Canada.ca</a>
+    <div class="dropdown">
+      <span class="menu-item dropdown-toggle">Services & Resources</span>
+      <div class="dropdown-content">
+        <a href="#">Jobs and the workplace</a>
+        <a href="#">Immigration and citizenship</a>
+        <!-- Additional dropdown links -->
+      </div>
+    </div>
+    <!-- Language Translation Dropdown -->
+    <div class="language-dropdown">
+      <button class="language-toggle">Language</button>
+      <div class="language-content">
+        <a href="?lang=en">English</a>
+        <a href="?lang=fr">Français</a>
+        <a href="?lang=sp">Spanish</a>
+        <!-- Add more languages as needed -->
+      </div>
+      <div class="search-container" onclick="window.location='/search'">
+        <img src="images/searchbar.jpg" alt="Search icon" class="search-icon">
+      </div>
+  </header>
+
+  <div class="main-content">
+    <h1><a href="main.html">
+      <img src="logo.webp"
+           alt="OSDP home logo."
+           class="header-image"
+           style="width: 50px; height: auto;">
+  </a><p><h1>Explore Our Platform:</h1></p>
+  <h3>Click on any section below to learn more and engage with our content!</h3>
+  
+  </h1>
+    <button class="accordion"><h2>About the Platform</button>
+    <div class="panel">
+      <p><h1>The Open Science and Data Platform provides access to science, data, publications and information about development activities across the country that can be used to understand the cumulative effects of human activities to support better decisions in the future.</h1></p>
+    </div>
+
+    <button class="accordion">Our Goal</button>
+    <div class="panel">
+      <p>Details about the goals of the platform... [Pseudo text for content]</p>
+    </div>
+
+    <button class="accordion">Where does the data come from? Science and Data Contributors</button>
+    <div class="panel">
+      <p>List of data contributors and their roles... [Pseudo text for content]</p>
+    </div>
+
+  <button class="accordion">Cumulative Effects Records</button>
+  <div class="panel">
+    <p>These records include geospatial data, project impact assessment records, federal regulatory activities, maps, and scientific publications2.</p>
+  </div>
+</div>
+
+  <footer>
+    © 2024 Government of Canada
+  </footer>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

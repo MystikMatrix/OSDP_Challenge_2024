@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Open Science and Data Platform</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .site-header {
+      background: #f8f8f8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .site-header .logo,
+    .site-header .dropdown,
+    .site-header .search-container {
+      margin-right: 20px;
+    }
+
+    .site-header img.logo {
+      cursor: pointer;
+      height: 50px;
+    }
+
+    .menu-item {
+      text-decoration: none;
+      color: #0053b3;
+      font-size: 16px;
+      margin-right: 20px;
+    }
+
+    .menu-item:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-toggle {
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      padding: 12px 16px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-container {
+      margin-left: auto;
+      cursor: pointer;
+    }
+
+    .platform-intro,
+    .search-area,
+    .tips,
+    .featured-content,
+    footer {
+      padding: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .platform-intro h1 {
+      color: #0053b3;
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .search-area input[type="text"] {
+      width: calc(100% - 42px);
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 1em;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .search-area button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 0 4px 4px 0;
+      font-size: 1em;
+    }
+
+    .search-area button:hover {
+      background-color: #0056b3;
+    }
+
+    .tips h2,
+    .featured-content h2 {
+      font-size: 1.5em;
+      color: #0053b3;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 10px;
+      border: none;
+    }
+
+    .header-image {
+      width: 100%;
+      /* Ensures the image scales with the width of the container */
+      height: auto;
+      /* Maintains the image's aspect ratio */
+      max-height: 300px;
+      /* Maximum height to ensure the image isn't too tall on larger screens */
+      object-fit: cover;
+      /* Ensures the image covers the area without stretching */
+    }
+
+    .tips-button {
+      background-color: #007bff;
+      /* Color of the button */
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      /* Allows it to sit in line with text */
+      margin: 10px 0;
+    }
+
+    .tips-button:hover {
+      background-color: #003974;
+      /* Darker shade for hover effect */
+    }
+
+    .tips-link {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    .video-tour {
+      background-color: #f2f2f2;
+      color: #0053b3;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .video-tour:hover {
+      background-color: #e1e1e1;
+      text-decoration: underline;
+    }
+
+    .platform-intro,
+    .updates-list {
+      padding: 20px;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .platform-intro h1,
+    .update-item h2 {
+      color: #0053b3;
+    }
+
+    .update-item {
+      border-bottom: 1px solid #eaeaea;
+      padding: 20px 0;
+    }
+
+    .update-date {
+      font-style: italic;
+      color: #999999;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <!-- Wrap the image with an anchor tag pointing to www.canada.ca -->
+      <a href="https://www.canada.ca">
+        <img src="images/header.jpg" alt="Government of Canada logo" class="logo-image">
+      </a>
+
+    </div>
+    <a href="https://www.canada.ca" class="menu-item">Canada.ca</a>
+    <div class="dropdown">
+      <span class="menu-item dropdown-toggle">Services & Resources</span>
+      <div class="dropdown-content">
+        <a href="#">Jobs and the workplace</a>
+        <a href="#">Immigration and citizenship</a>
+        <!-- Additional dropdown links -->
+      </div>
+    </div>
+    <div class="search-container" onclick="window.location='/search'">
+      <img src="images/searchbar.jpg" alt="Search icon" class="search-icon">
+    </div>
+  </header>
+
+  <main>
+    <section class="platform-intro">
+      <h1><a href="main.html">
+        <img src="logo.webp"
+             alt="OSDP home logo."
+             class="header-image"
+             style="width: 50px; height: auto;">
+    </a>Latest Updates</h1>
+      <p>Stay informed with the most recent news, data releases, and more from the Open Science and Data Platform.</p>
+    </section>
+
+    <section class="updates-list">
+      <article class="update-item">
+        <h2>New Data Set Released</h2>
+        <p class="update-date">March 28, 2024</p>
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">The Open Science and Data Platform now provides access to over 146k records, including
+            maps, datasets and science publications. They’re used to help us understand how our actions affect our
+            environment. 🧵 <a href="https://t.co/G1DbVMXmqA">pic.twitter.com/G1DbVMXmqA</a></p>&mdash; Natural
+          Resources (@NRCan) <a href="https://twitter.com/NRCan/status/1622682628984868870?ref_src=twsrc%5Etfw">February
+            6, 2023</a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- Repeat for each update -->
+    </section>
+  </main>
+
+  <footer>
+    © 2024 Government of Canada
+  </footer>
+</body>
+
+</html>
